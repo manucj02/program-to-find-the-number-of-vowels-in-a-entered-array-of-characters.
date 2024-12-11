@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <script>
+        function countVowels() {
+            let input = document.getElementById('charArray').value;
+            let vowels = "aeiouAEIOU";
+            let count = 0;
+
+            for (let i = 0; i < input.length; i++) {
+                if (vowels.indexOf(input[i]) !== -1) {
+                    count++;
+                }
+            }
+
+            document.getElementById('result').innerHTML = "Vowels: " + count;
+        }
+    </script>
+</head>
+<body>
+    <h2>Number of Vowels in String</h2>
+    <input type="text" id="charArray" >
+    <button onclick="countVowels()">find</button>
+    <p id="result"></p>
+</body>
+</html>
